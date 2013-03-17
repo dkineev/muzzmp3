@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Muzzmp3Ru</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrapper">
+<header>
+    <h2>MuzzMP3.ru</h2>
+    <%=link_to 'Главная', :controller => 'static_pages', :action => 'home'%> |
+    <%=link_to 'Музыка', :controller => 'static_pages', :action => 'music'%> |
+    <%=link_to 'Картинки', :controller => 'static_pages', :action => 'photo'%> |
+    <%=link_to 'Android', :controller => 'static_pages', :action => 'android'%> | 
+    <%=link_to 'Java', :controller => 'static_pages', :action => 'java'%> |
+    <%=link_to 'О сайте', :controller => 'static_pages', :action => 'about'%>
+</header>
+<hr />
+<div id="left">
+    <a href="#">Статьи</a> <br />
+    <a href="#">Уроки</a>
+</div>
+<div id="content">
+<%= yield %>
+</div>
+
+<div id="right">
+    &nbsp;
+</div>
+&nbsp;
+<div id="footer">&copy; Kneeff</div>
+</div>
+</body>
+</html>
